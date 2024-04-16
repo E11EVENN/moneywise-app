@@ -1,92 +1,38 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /clientes/{document} {
-      allow create: if request.auth.uid == document;
-      allow read: if true;
-      allow write: if false;
-      allow delete: if false;
-    }
-
-    match /users/{document} {
-      allow create: if true;
-      allow read: if true;
-      allow write: if false;
-      allow delete: if false;
-    }
-
-    match /Consulta/{document} {
-      allow create: if true;
-      allow read: if true;
-      allow write: if false;
-      allow delete: if false;
-    }
-
-    match /Clientess/{document} {
-      allow create: if true;
-      allow read: if true;
-      allow write: if false;
-      allow delete: if false;
-    }
-
-    match /Clientess/{parent}/Prestamos/{document} {
-      allow create: if true;
-      allow read: if true;
-      allow write: if false;
-      allow delete: if false;
-    }
-
-    match /{path=**}/Prestamos/{document} {
-      allow read: if true;
-    }
-
-
     match /Usuarios/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if false;
+      allow write: if true;
       allow delete: if false;
     }
 
     match /Roles/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if false;
+      allow write: if true;
       allow delete: if false;
     }
 
     match /Clientes_C/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if false;
+      allow write: if true;
       allow delete: if false;
     }
 
     match /Prestamos_C/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if false;
-      allow delete: if false;
-    }
-
-    match /Ventas/{document} {
-      allow create: if true;
-      allow read: if true;
-      allow write: if false;
+      allow write: if true;
       allow delete: if false;
     }
 
     match /Pagos/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if false;
-      allow delete: if false;
-    }
-
-    match /Articulo/{document} {
-      allow create: if true;
-      allow read: if true;
-      allow write: if false;
+      allow write: if true;
       allow delete: if false;
     }
   }
