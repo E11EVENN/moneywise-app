@@ -1,3 +1,32 @@
 {
-  "indexes": []
+  "indexes": [
+    {
+      "collectionGroup": "registrarCliente",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "creador",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "fechaCreacion",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "amortizaciondeCredito",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "idReferenciaCliente",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "fechaCreacion",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
 }
