@@ -1,4 +1,4 @@
-# proyectoucc
+# MoneyWise
 
 A new Flutter project.
 
